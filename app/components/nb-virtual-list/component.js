@@ -1,0 +1,1 @@
+export { default } from 'nullbase-virtual-list/components/nb-virtual-list/component';

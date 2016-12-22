@@ -1,0 +1,24 @@
+<div class="item-container" touch-action="{{touchAction}}">
+
+  {{#each childViewsX key="@index" as |item|}}
+    {{component item touchAction=touchAction args=args}}
+  {{/each}}
+
+
+
+</div>
+
+{{#if scrollBar}}
+    <div class="ember-list-view-scrollbar">
+        <div class="ember-list-view-scroll-rail">
+            <div class="ember-list-view-scrollbar-knob"></div>
+        </div>
+    </div>
+{{/if}}
+
+
+
+
+
+
+

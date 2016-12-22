@@ -7,6 +7,10 @@
 # dependencies
 /node_modules
 /bower_components
+/.idea
+/*.iml
+/out
+/.idea_modules
 
 # misc
 /.sass-cache

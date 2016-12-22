@@ -1,0 +1,142 @@
+
+.ember-list-view {
+  overflow: auto;
+  position: relative;
+
+}
+
+.ember-list-item-view {
+  position: absolute;
+
+}
+
+.list-frame {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  overflow: hidden;
+  right: 0px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  &.hide-scrollbars {
+    .item-container {
+      right: 0px;
+    }
+
+    .ember-list-view-scrollbar {
+      display: none;
+    }
+  }
+
+  .item-container {
+    position: absolute;
+    width: auto;
+    right: 0px;
+    left: 0px;
+  }
+
+  > div {
+    height: 100%;
+  }
+}
+
+.list-frame-mobile {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  right: 0px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0.01px);
+  z-index: 0;
+  -webkit-transform: translateZ(0);
+  &.hide-scrollbars {
+    .item-container {
+      right: 0px;
+    }
+
+    .ember-list-view-scrollbar {
+      display: none;
+    }
+  }
+
+  .item-container {
+    transform: translate3d(0, 0, 0.01px);
+    width: 100%;
+
+  }
+
+  > div {
+    height: 100%;
+  }
+}
+
+.ember-list-view-scrollbar {
+  background: rgba(0,0,0,.1);
+  border: 0px;
+  border-radius: 0;
+  bottom: 0px;
+  display: block;
+  height: auto !important;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.ember-list-view-scrollbar-knob {
+  background: rgba(0, 0, 0, 0.15);
+
+  height: 100px;
+  border-radius: 0px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  width: 15px;
+}
+
+.down .ember-list-view-scrollbar-knob {
+  background: rgba(0, 0, 0, .55);
+
+  pointer-events: none;
+  position: absolute;
+
+}
+
+.ember-list-view-scroll-rail {
+  background: transparent;
+  bottom: 0px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 15px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.virtual-list-item {
+  position: absolute !important;
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.resize-listener {
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  border: 0px solid #000;
+}
