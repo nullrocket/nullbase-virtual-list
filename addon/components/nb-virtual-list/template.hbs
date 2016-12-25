@@ -1,7 +1,7 @@
 <div class="item-container" touch-action="{{touchAction}}">
 
   {{#each childViewsX key="@index" as |item|}}
-    {{component item touchAction=touchAction args=args}}
+    {{component item touchAction=touchAction args=args options=args }}
   {{/each}}
 
 

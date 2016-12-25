@@ -1,6 +1,6 @@
 {
   "name": "nullbase-virtual-list",
-  "version": "0.0.0-alpha",
+  "version": "0.0.1-alpha",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -34,9 +34,11 @@
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
+    "ember-prop-types": "3.2.1",
     "ember-resolver": "^2.0.3",
+    "ember-spread": "1.0.0",
     "loader.js": "^4.0.1",
-    "nullbase-basic-layout": "https://github.com/nullrocket/nullbase-basic-layout.git#0.0.0-alpha",
+    "nullbase-basic-layout": "https://github.com/nullrocket/nullbase-basic-layout.git#0.0.1-alpha",
     "nullbase-button": "https://github.com/nullrocket/nullbase-button.git#0.0.0-alpha",
     "nullbase-checkbox": "https://github.com/nullrocket/nullbase-checkbox.git#0.0.0-alpha",
     "setimmediate": "^1.0.5"
@@ -53,8 +55,7 @@
     "ember-truth-helpers": "1.2.0",
     "lodash": "^4.16.3",
     "nullbase-gestures": "https://github.com/nullrocket/nullbase-gestures.git#0.0.0-alpha",
-    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git#0.0.0-alpha"
-
+    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git#0.0.1-alpha"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
