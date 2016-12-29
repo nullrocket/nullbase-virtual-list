@@ -219,7 +219,10 @@ export default Ember.Mixin.create({
         };
 
         self.get('gestures').addEventListener(elementC, 'down', self._down);
+
+
         self._track = function ( e ) {
+          e.preventTap();
           if ( self && scroller ) {
 
             if ( !mousedown ) {
