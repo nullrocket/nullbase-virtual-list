@@ -463,7 +463,13 @@ export default Ember.Mixin.create({
     //   console.log(this.get('contentHeight'));
 
   })),
+  nativeUpdate: Ember.on('init', Ember.observer("items.length", function () {
+      if ( this.get('useNativeScroll') === true ) {
+        $(this.get('element')).scrollTop(0);
+      }
 
+
+  })),
 
   setupScrollBar: Ember.observer('scrollBarElement', function () {
     var self = this;
