@@ -443,7 +443,6 @@ export default Ember.Mixin.create({
         }
         else {
           $('.item-container', self.get('element')).get(0).style[ "transform" ] = 'translate3d(0px, 0px, 0)';
-
           $('.item-container', self.get('element')).height(Math.max(itemCount * self.get('itemHeight'), self.get('height')));
           raf = makeRAF(updates, self, itemHeight, self.get('contentProperty'), self.get('items'));
 
