@@ -462,10 +462,15 @@ export default Ember.Mixin.create({
     //   console.log(this.get('contentHeight'));
 
   })),
+  cachedLength:0,
   nativeUpdate: Ember.on('init', Ember.observer("items.length", function () {
-      if ( this.get('useNativeScroll') === true ) {
+    Ember.run.scheduleOnce('afterRender',()=>{
+      if ( this.get('useNativeScroll') === true && this.get('cachedLength') !== this.get('item.length')) {
+        this.set('cachedLength',this.get('item.length'));
         $(this.get('element')).scrollTop(0);
       }
+    });
+
 
 
   })),
