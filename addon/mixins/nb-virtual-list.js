@@ -94,7 +94,7 @@ export default Ember.Mixin.create({
   tagName: 'div',
   items: [],
   unfilteredItems: [],
-  classNames: [ 'hide-scrollbars' ],
+  classNames: [ 'hide-scrollbars'],
   classNameBindings: [ 'useNativeScroll:list-frame-mobile:list-frame' ],
   useNativeScroll: false,
   itemHeight: 0,
@@ -644,6 +644,9 @@ export default Ember.Mixin.create({
     this._inView = function ( e, isInView ) {
       if ( isInView ) {
         self._resizeListener();
+      }
+      else {
+        $('.item-container', self.get('element')).parent().addClass('hide-scrollbars');
       }
 
       // $(self.get('element')).unbind('inview',inView);

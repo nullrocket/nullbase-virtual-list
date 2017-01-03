@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import SpreadMixin from 'ember-spread'
+import SpreadMixin from 'ember-spread';
 export default Ember.Mixin.create(SpreadMixin, {
   parentER: null,
 
