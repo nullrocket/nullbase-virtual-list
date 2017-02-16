@@ -1,6 +1,6 @@
 {
   "name": "nullbase-virtual-list",
-  "version": "0.0.8-alpha",
+  "version": "0.0.9-alpha",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -55,7 +55,7 @@
     "ember-truth-helpers": "1.2.0",
     "lodash": "^4.16.3",
     "nullbase-gestures": "https://github.com/nullrocket/nullbase-gestures.git#0.0.0-alpha",
-    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git#0.0.1-alpha"
+    "nullbase-theme-service": "https://github.com/nullrocket/nullbase-theme-service.git#0.0.2-alpha"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
