@@ -39,7 +39,7 @@
     "ember-spread": "1.0.0",
     "loader.js": "^4.0.1",
     "nullbase-basic-layout": "https://github.com/nullrocket/nullbase-basic-layout.git#0.0.1-alpha",
-    "nullbase-button": "https://github.com/nullrocket/nullbase-button.git#0.0.0-alpha",
+    "nullbase-button": "https://github.com/nullrocket/nullbase-button.git#0.0.1-alpha",
     "nullbase-checkbox": "https://github.com/nullrocket/nullbase-checkbox.git#0.0.0-alpha",
     "setimmediate": "^1.0.5"
   },
