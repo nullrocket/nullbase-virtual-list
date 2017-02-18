@@ -508,7 +508,9 @@ export default Ember.Mixin.create({
         offsetY = offsetY / actualScale;
 
         offsetY = offsetY - (scrollBarKnobHeight / 2);
+        window.requestAnimationFrame(function(){
         self.get('scroller').scrollTo(0, (offsetY * ($('.item-container', self.get('element')).height() - self.get('height')) / $('.ember-list-view-scroll-rail', self.get('scrollBarElement')).height()), false);
+        });
       };
       gestures.addEventListener(self.get('scrollBarElement').get(0), 'track', self._scrollTrack);
       self._scrollUp = function () {
