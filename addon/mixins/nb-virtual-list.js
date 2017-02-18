@@ -480,12 +480,12 @@ export default Ember.Mixin.create({
     let gestures = self.get('gestures');
     if ( self.get('scrollBar') && self.get("scrollBarElement").length > 0 ) {
 
-
+      var rect = null;
       self._scrollDown = function ( e ) {
         // Don't react if initial down happens on a form element
         var actualScale = (self.get('scrollBarElement').height() - $('.ember-list-view-scrollbar-knob', self.get('scrollBarElement')).height()) / self.get('scrollBarElement').height();
 
-        var rect = e.target.getBoundingClientRect();
+        rect = e.target.getBoundingClientRect();
         //var offsetX = e.clientX - rect.left;
         self.get('scrollBarElement').addClass('down');
 
@@ -497,11 +497,12 @@ export default Ember.Mixin.create({
         self.get('scroller').scrollTo(0, (offsetY * ($('.item-container', self.get('element')).height() - self.get('height')) / $('.ember-list-view-scroll-rail', self.get('scrollBarElement')).height()), false);
       };
       gestures.addEventListener(self.get('scrollBarElement').get(0), 'down', self._scrollDown);
+
       self._scrollTrack = function ( e ) {
         var scrollBarElementHeight = self.get('scrollBarElement').height();
         var scrollBarKnobHeight = $('.ember-list-view-scrollbar-knob', self.get('scrollBarElement')).height();
         var actualScale = (scrollBarElementHeight - scrollBarKnobHeight) / scrollBarElementHeight;
-        var rect = e.target.getBoundingClientRect();
+      //  var rect = e.target.getBoundingClientRect();
 
 
         var offsetY = (e.clientY - rect.top);
