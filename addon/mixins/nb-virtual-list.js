@@ -394,7 +394,7 @@ export default Ember.Mixin.create({
         }
         self.get('childViewsX').pushObjects(objects);
 
-        var firstInView = ((Math.floor(scrollTop / itemHeight) - 100) > 0) ? (Math.floor(scrollTop / itemHeight) - 100) : 0;
+        var firstInView = ((Math.floor(scrollTop / itemHeight) - 4) > 0) ? (Math.floor(scrollTop / itemHeight) - 4) : 0;
 
         var updates = [];
         var childViewLength = self.get('childViewsX').length;
