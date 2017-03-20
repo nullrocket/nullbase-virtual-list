@@ -1,6 +1,6 @@
 {
   "name": "nullbase-virtual-list",
-  "version": "0.0.13-alpha",
+  "version": "0.0.14-alpha",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
